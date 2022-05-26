@@ -57,16 +57,16 @@ public class Radio {
         if (currentVolume >= 10) {
             setCurrentVolume(10);
         } else {
-            setCurrentVolume(currentVolume+1);
+            setCurrentVolume(currentVolume + 1);
         }
     }
 
 
     public void quietVolume() {
-        if (currentVolume <=0) {
+        if (currentVolume <= 0) {
             setCurrentVolume(0);
         } else {
-            setCurrentVolume(currentVolume -1);
+            setCurrentVolume(currentVolume - 1);
         }
     }
 }

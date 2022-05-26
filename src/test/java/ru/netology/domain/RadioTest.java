@@ -1,4 +1,5 @@
 package ru.netology.domain;
+
 import org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
@@ -167,6 +168,7 @@ public class RadioTest {
 
         assertEquals(actual, expected);
     }
+
     @Test
     void quietVolume() {
         Radio radio = new Radio();
@@ -178,6 +180,7 @@ public class RadioTest {
 
         assertEquals(actual, expected);
     }
+
     @Test
     void quietVolume1() {
         Radio radio = new Radio();
@@ -189,6 +192,7 @@ public class RadioTest {
 
         assertEquals(actual, expected);
     }
+
     @Test
     void quietVolume2() {
         Radio radio = new Radio();
