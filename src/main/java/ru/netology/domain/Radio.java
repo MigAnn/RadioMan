@@ -6,7 +6,7 @@ public class Radio {
     private int minRadioStation;
     private int maxRadioStation = 9;
     private int minVolume;
-    private int maxVolume = 10;
+    private int maxVolume = 100;
 
 
     public void setCurrentRadioStation(int currentRadioStation) {

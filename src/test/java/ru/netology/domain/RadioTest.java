@@ -120,7 +120,7 @@ public class RadioTest {
     void currentVolume3() {
 
 
-        radio.setCurrentVolume(11);
+        radio.setCurrentVolume(111);
 
         radio.getCurrentVolume();
 
@@ -130,29 +130,29 @@ public class RadioTest {
     @Test
     void highVolume() {
 
-        radio.setCurrentVolume(9);
+        radio.setCurrentVolume(99);
         radio.highVolume();
 
         radio.getCurrentVolume();
 
-        assertEquals(10, radio.getCurrentVolume());
+        assertEquals(100, radio.getCurrentVolume());
     }
 
     @Test
     void highVolume1() {
 
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
         radio.highVolume();
 
         radio.getCurrentVolume();
 
-        assertEquals(10, radio.getCurrentVolume());
+        assertEquals(100, radio.getCurrentVolume());
     }
 
     @Test
     void highVolume2() {
 
-        radio.setCurrentVolume(11);
+        radio.setCurrentVolume(101);
         radio.highVolume();
 
         radio.getCurrentVolume();
