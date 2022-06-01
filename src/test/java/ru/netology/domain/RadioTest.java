@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RadioTest {
     Radio radio = new Radio();
+
     @Test
     void currentRadioStation() {
 
@@ -90,7 +91,7 @@ public class RadioTest {
 
         radio.getCurrentRadioStation();
 
-        assertEquals(9,   radio.getCurrentRadioStation());
+        assertEquals(9, radio.getCurrentRadioStation());
     }
 
     @Test
@@ -101,7 +102,7 @@ public class RadioTest {
 
         radio.getCurrentVolume();
 
-        assertEquals(2,   radio.getCurrentVolume());
+        assertEquals(2, radio.getCurrentVolume());
     }
 
     @Test
@@ -112,7 +113,7 @@ public class RadioTest {
 
         radio.getCurrentVolume();
 
-        assertEquals(0,   radio.getCurrentVolume());
+        assertEquals(0, radio.getCurrentVolume());
     }
 
     @Test
@@ -123,7 +124,7 @@ public class RadioTest {
 
         radio.getCurrentVolume();
 
-        assertEquals(0,   radio.getCurrentVolume());
+        assertEquals(0, radio.getCurrentVolume());
     }
 
     @Test
@@ -134,7 +135,7 @@ public class RadioTest {
 
         radio.getCurrentVolume();
 
-        assertEquals(10,   radio.getCurrentVolume());
+        assertEquals(10, radio.getCurrentVolume());
     }
 
     @Test
@@ -145,7 +146,7 @@ public class RadioTest {
 
         radio.getCurrentVolume();
 
-        assertEquals(10,   radio.getCurrentVolume());
+        assertEquals(10, radio.getCurrentVolume());
     }
 
     @Test
@@ -156,7 +157,7 @@ public class RadioTest {
 
         radio.getCurrentVolume();
 
-        assertEquals(1,   radio.getCurrentVolume());
+        assertEquals(1, radio.getCurrentVolume());
     }
 
     @Test
@@ -167,7 +168,7 @@ public class RadioTest {
 
         radio.getCurrentVolume();
 
-        assertEquals(0,   radio.getCurrentVolume());
+        assertEquals(0, radio.getCurrentVolume());
     }
 
     @Test
@@ -179,7 +180,7 @@ public class RadioTest {
         radio.getCurrentVolume();
 
 
-        assertEquals(0,   radio.getCurrentVolume());
+        assertEquals(0, radio.getCurrentVolume());
     }
 
     @Test
@@ -190,6 +191,6 @@ public class RadioTest {
 
         radio.getCurrentVolume();
 
-        assertEquals(2,   radio.getCurrentVolume());
+        assertEquals(2, radio.getCurrentVolume());
     }
 }
