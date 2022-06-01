@@ -3,13 +3,17 @@ package ru.netology.domain;
 public class Radio {
     private int currentRadioStation;
     private int currentVolume;
+    private int minRadioStation ;
+    private int maxRadioStation = 9;
+    private int minVolume ;
+    private int maxVolume = 10;
 
 
     public void setCurrentRadioStation(int currentRadioStation) {
-        if (currentRadioStation < 0) {
+        if (currentRadioStation < minRadioStation) {
             return;
         }
-        if (currentRadioStation > 9) {
+        if (currentRadioStation > maxRadioStation) {
             return;
         }
         this.currentRadioStation = currentRadioStation;
@@ -22,16 +26,16 @@ public class Radio {
 
 
     public void nextStation() {
-        if (currentRadioStation >= 9) {
-            setCurrentRadioStation(0);
+        if (currentRadioStation >= maxRadioStation) {
+            setCurrentRadioStation(minRadioStation);
         } else {
             setCurrentRadioStation(currentRadioStation + 1);
         }
     }
 
     public void prevStation() {
-        if (currentRadioStation <= 0) {
-            setCurrentRadioStation(9);
+        if (currentRadioStation <= minRadioStation) {
+            setCurrentRadioStation(maxRadioStation);
         } else {
             setCurrentRadioStation(currentRadioStation - 1);
         }
@@ -39,10 +43,10 @@ public class Radio {
 
 
     public void setCurrentVolume(int currentVolume) {
-        if (currentVolume < 0) {
+        if (currentVolume < minRadioStation) {
             return;
         }
-        if (currentVolume > 10) {
+        if (currentVolume > maxVolume) {
             return;
         }
         this.currentVolume = currentVolume;
@@ -54,8 +58,8 @@ public class Radio {
 
 
     public void highVolume() {
-        if (currentVolume >= 10) {
-            setCurrentVolume(10);
+        if (currentVolume >= maxVolume) {
+            setCurrentVolume(maxVolume);
         } else {
             setCurrentVolume(currentVolume + 1);
         }
@@ -63,8 +67,8 @@ public class Radio {
 
 
     public void quietVolume() {
-        if (currentVolume <= 0) {
-            setCurrentVolume(0);
+        if (currentVolume <= minVolume) {
+            setCurrentVolume(minVolume);
         } else {
             setCurrentVolume(currentVolume - 1);
         }
