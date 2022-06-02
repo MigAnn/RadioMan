@@ -9,20 +9,23 @@ public class RadioTest {
     Radio radio = new Radio();
 
     @Test
-    public void numberOfStation(){
+    public void numberOfStation() {
         radio.setNumberOfStation(-4);
         assertEquals(0, radio.getCurrentRadioStation());
     }
+
     @Test
-    public void numberOfStation1(){
+    public void numberOfStation1() {
         radio.setNumberOfStation(6);
         assertEquals(6, radio.getCurrentRadioStation());
     }
+
     @Test
-    public void numberOfStation2(){
+    public void numberOfStation2() {
         radio.setNumberOfStation(12);
         assertEquals(9, radio.getCurrentRadioStation());
     }
+
     @Test
     void currentRadioStation() {
 
