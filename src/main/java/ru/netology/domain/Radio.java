@@ -9,13 +9,12 @@ public class Radio {
     private int maxVolume = 100;
     private int numberOfStation = 10;
 
-    public Radio() {
-    }
 
     public Radio(int numberOfStation) {
         this.numberOfStation = numberOfStation;
     }
-
+    public Radio() {
+    }
     public void setCurrentRadioStation(int currentRadioStation) {
         if (currentRadioStation < minRadioStation) {
             return;

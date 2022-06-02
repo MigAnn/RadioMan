@@ -9,6 +9,12 @@ public class RadioTest {
     Radio radio = new Radio();
 
     @Test
+    public void numberOfRadioStation(){
+        Radio radio = new Radio();
+        Radio radio1 = new Radio(0);
+        assertEquals(0, radio.getCurrentRadioStation());
+    }
+    @Test
     void currentRadioStation() {
 
         radio.setCurrentRadioStation(2);
