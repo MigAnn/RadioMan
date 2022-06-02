@@ -14,6 +14,16 @@ public class RadioTest {
         assertEquals(6, radio.getCurrentRadioStation());
     }
     @Test
+    public void numberOfStation1(){
+        radio.setCurrentStation(10);
+        assertEquals(9, radio.getCurrentRadioStation());
+    }
+    @Test
+    public void numberOfStation2(){
+        radio.setCurrentStation(11);
+        assertEquals(9, radio.getCurrentRadioStation());
+    }
+    @Test
     void currentRadioStation() {
 
         radio.setCurrentRadioStation(2);
