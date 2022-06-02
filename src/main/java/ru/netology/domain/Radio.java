@@ -12,17 +12,16 @@ public class Radio {
     public Radio(int numberOfStation) {
         this.numberOfStation = numberOfStation;
     }
-
-    public void setCurrentStation(int currentRadioStation) {
-        if (currentRadioStation < 0) {
+    public void setNumberOfStation(int currentRadioStation) {
+        if (currentRadioStation <= minRadioStation) {
             return;
         }
-        if (currentRadioStation > numberOfStation - 1) {
-            return;
+        if (currentRadioStation >= numberOfStation){
+            setCurrentRadioStation(numberOfStation-1);
+        }else {
+            setCurrentRadioStation(currentRadioStation);
         }
-        this.currentRadioStation = currentRadioStation;
     }
-
     public Radio() {
     }
 
