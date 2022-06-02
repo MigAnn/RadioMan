@@ -8,6 +8,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RadioTest {
 
     @Test
+    public void shouldCreate (){
+        Radio radio = new Radio();
+
+    }
     void currentRadioStation() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(2);
