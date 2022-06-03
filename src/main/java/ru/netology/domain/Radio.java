@@ -13,15 +13,8 @@ public class Radio {
         this.numberOfStation = numberOfStation;
     }
 
-    public void setNumberOfStation(int currentRadioStation) {
-        if (currentRadioStation <= minRadioStation) {
-            return;
-        }
-        if (currentRadioStation >= numberOfStation) {
-            setCurrentRadioStation(numberOfStation - 1);
-        } else {
-            setCurrentRadioStation(currentRadioStation);
-        }
+    public void setCurrentStationForAnyQuantity(int numberOfStation, int maxRadioStation) {
+        currentRadioStation = (numberOfStation % maxRadioStation);
     }
 
     public Radio() {

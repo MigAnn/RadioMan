@@ -9,21 +9,25 @@ public class RadioTest {
     Radio radio = new Radio();
 
     @Test
-    public void numberOfStation() {
-        radio.setNumberOfStation(-4);
-        assertEquals(0, radio.getCurrentRadioStation());
+    public void nowStation() {
+
+        radio.setCurrentStationForAnyQuantity(20, 15);
+        assertEquals(5, radio.getCurrentRadioStation());
+
     }
 
     @Test
-    public void numberOfStation1() {
-        radio.setNumberOfStation(6);
-        assertEquals(6, radio.getCurrentRadioStation());
+    public void nowStation1() {
+        radio.setCurrentStationForAnyQuantity(34, 9);
+        assertEquals(7, radio.getCurrentRadioStation());
+
     }
 
     @Test
-    public void numberOfStation2() {
-        radio.setNumberOfStation(12);
-        assertEquals(9, radio.getCurrentRadioStation());
+    public void nowStation2() {
+        radio.setCurrentStationForAnyQuantity(1_000_000_000, 15);
+        assertEquals(10, radio.getCurrentRadioStation());
+
     }
 
     @Test
