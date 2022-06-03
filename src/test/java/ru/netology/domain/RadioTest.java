@@ -9,42 +9,27 @@ public class RadioTest {
     Radio radio = new Radio();
 
     @Test
-    public void nowStation() {
+    void currentRadioStations() {
+        Radio radio1=new Radio(20);
 
-        radio.setCurrentStationForAnyQuantity(20, 15);
-        assertEquals(5, radio.getCurrentRadioStation());
+        radio1.setCurrentRadioStation(15);
 
+
+        assertEquals(15, radio1.getCurrentRadioStation());
     }
-
-    @Test
-    public void nowStation1() {
-        radio.setCurrentStationForAnyQuantity(34, 9);
-        assertEquals(7, radio.getCurrentRadioStation());
-
-    }
-
-    @Test
-    public void nowStation2() {
-        radio.setCurrentStationForAnyQuantity(1_000_000_000, 15);
-        assertEquals(10, radio.getCurrentRadioStation());
-
-    }
-
     @Test
     void currentRadioStation() {
 
-        radio.setCurrentRadioStation(2);
+        radio.setCurrentRadioStation(7);
 
-        radio.getCurrentRadioStation();
 
-        assertEquals(2, radio.getCurrentRadioStation());
+        assertEquals(7, radio.getCurrentRadioStation());
     }
 
     @Test
     void maxStation() {
         radio.setCurrentRadioStation(10);
 
-        radio.getCurrentRadioStation();
 
         assertEquals(0, radio.getCurrentRadioStation());
 
@@ -55,7 +40,6 @@ public class RadioTest {
 
         radio.setCurrentRadioStation(-10);
 
-        radio.getCurrentRadioStation();
 
         assertEquals(0, radio.getCurrentRadioStation());
 
@@ -67,7 +51,6 @@ public class RadioTest {
         radio.setCurrentRadioStation(9);
         radio.nextStation();
 
-        radio.getCurrentRadioStation();
 
         assertEquals(0, radio.getCurrentRadioStation());
     }
@@ -78,7 +61,6 @@ public class RadioTest {
         radio.setCurrentRadioStation(7);
         radio.nextStation();
 
-        radio.getCurrentRadioStation();
 
         assertEquals(8, radio.getCurrentRadioStation());
     }
@@ -86,12 +68,11 @@ public class RadioTest {
     @Test
     void upperBoundMinStation() {
 
-        radio.setCurrentRadioStation(0);
+        radio.setCurrentRadioStation(9);
         radio.prevStation();
 
-        radio.getCurrentRadioStation();
 
-        assertEquals(9, radio.getCurrentRadioStation());
+        assertEquals(8, radio.getCurrentRadioStation());
     }
 
     @Test
@@ -100,7 +81,6 @@ public class RadioTest {
         radio.setCurrentRadioStation(1);
         radio.prevStation();
 
-        radio.getCurrentRadioStation();
 
         assertEquals(0, radio.getCurrentRadioStation());
     }
@@ -111,7 +91,6 @@ public class RadioTest {
         radio.setCurrentRadioStation(-1);
         radio.prevStation();
 
-        radio.getCurrentRadioStation();
 
         assertEquals(9, radio.getCurrentRadioStation());
     }
@@ -122,7 +101,6 @@ public class RadioTest {
 
         radio.setCurrentVolume(2);
 
-        radio.getCurrentVolume();
 
         assertEquals(2, radio.getCurrentVolume());
     }
@@ -133,7 +111,6 @@ public class RadioTest {
 
         radio.setCurrentVolume(-1);
 
-        radio.getCurrentVolume();
 
         assertEquals(0, radio.getCurrentVolume());
     }
@@ -144,7 +121,6 @@ public class RadioTest {
 
         radio.setCurrentVolume(111);
 
-        radio.getCurrentVolume();
 
         assertEquals(0, radio.getCurrentVolume());
     }
@@ -155,7 +131,6 @@ public class RadioTest {
         radio.setCurrentVolume(99);
         radio.highVolume();
 
-        radio.getCurrentVolume();
 
         assertEquals(100, radio.getCurrentVolume());
     }
@@ -166,8 +141,6 @@ public class RadioTest {
         radio.setCurrentVolume(100);
         radio.highVolume();
 
-        radio.getCurrentVolume();
-
         assertEquals(100, radio.getCurrentVolume());
     }
 
@@ -176,8 +149,6 @@ public class RadioTest {
 
         radio.setCurrentVolume(101);
         radio.highVolume();
-
-        radio.getCurrentVolume();
 
         assertEquals(1, radio.getCurrentVolume());
     }
@@ -188,7 +159,6 @@ public class RadioTest {
         radio.setCurrentVolume(-1);
         radio.quietVolume();
 
-        radio.getCurrentVolume();
 
         assertEquals(0, radio.getCurrentVolume());
     }
@@ -199,7 +169,6 @@ public class RadioTest {
         radio.setCurrentVolume(0);
         radio.quietVolume();
 
-        radio.getCurrentVolume();
 
 
         assertEquals(0, radio.getCurrentVolume());
@@ -211,7 +180,6 @@ public class RadioTest {
         radio.setCurrentVolume(3);
         radio.quietVolume();
 
-        radio.getCurrentVolume();
 
         assertEquals(2, radio.getCurrentVolume());
     }
